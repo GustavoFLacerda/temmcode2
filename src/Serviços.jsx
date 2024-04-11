@@ -4,7 +4,7 @@ import './css/satoshi.css';
 export default function Serviços(){
 
     return(
-        <section>
+        <section id="servicos">
         <div className="divisor-banner">
           <span className="divisor-esquerdo"></span>
           <span className="divisor-direito"></span>
