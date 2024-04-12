@@ -1436,7 +1436,7 @@ body {
     z-index: 3;
 }
 
-.menu-banner.scrolled{
+.menu-banner.scrolled, .menu-banner.menuopened{
     background: rgba(0, 0, 0, 0.95);
     height: 100px;
     top: 0%;
@@ -1452,12 +1452,15 @@ body {
 
 .links-menu a {
     font-family: "Chakra Petch", sans-serif;
+
     font-weight: 400;
     font-size: 2em;
     margin-left: 30px;
     color: white;
     text-decoration: none;
-    transition: text
+    transition: text;
+    z-index: 6;
+    box-sizing: border-box;
 }
 
 .links-menu a::after {
@@ -1561,7 +1564,8 @@ h3.gradient-azul-texto {
         display: block;
         margin-right: 10%;
         line-height: 2;
-        width: 100%
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
     }
 
     .container-banner {
@@ -1575,11 +1579,13 @@ h3.gradient-azul-texto {
     .links-menu {
         text-align: right;
         margin-right: 0px;
-        margin-top: 30px;
+        margin-top: 14px;
         margin-bottom: -100%;
         display: none;
         font-size: 0;
         transition: all 1s;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 6;
     
 
     .card-servicos p{
@@ -1607,7 +1613,6 @@ h3.gradient-azul-texto {
 
     .btn-outline {
         font-size: .8em;
-        margin-left:0px!important;
         padding: 0.7em 1.4em;
     }
 
@@ -1618,10 +1623,13 @@ h3.gradient-azul-texto {
 .links-mobile {
     display: block;
     font-size: 1em !important;
-    background-color: rgb(0, 0, 0);
-    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
     margin-bottom: auto;
     animation: fadeIn 1s ease forwards;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
 }
 
 .divisor-banner {
@@ -2017,6 +2025,14 @@ section#servicos{
     min-height: 1250px;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+.menu-banner.menuopened{
+    background: rgba(0, 0, 0, 0.95);
+}
+
 @media (max-width: 700px){
     div.case_column1{
         width: 100%;
@@ -2032,6 +2048,59 @@ section#servicos{
 
     section.contact_section div.contact_card, section.contact_section div.follow_card{
         width: 100%;
+        clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+        margin-bottom: 25px;
+        font-size: 1em;
+    }
+
+    section.portfolio h1{
+        font-size: 2em; /* change */
+        text-align: center;
+    }
+
+    div.case_column2{
+        margin-top: 0;
+    }
+
+    div.marquee{
+        font-size: 3em;
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .menu-banner {
+        position: fixed;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-bottom: 7%;
+        max-width: 1620px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 7%;
+        padding-right: 5vw;;
+        padding-left: 5vw;;
+        z-index: 3;
+    }
+
+    .menu-banner.scrolled, .menu-banner.menuopened{
+        background: rgba(0, 0, 0, 0.95);
+        height: 100px;
+        top: 0%;
+        padding-top: 15px;
+        box-sizing: border-box;
+        padding-bottom: 15px;
+    }
+
+    .second-outline{
+        margin-left: 20px;
+    }
+
+    .card-servicos p{
+        margin: 30px 30px 30px 30px;
+        font-size:1em;
     }
 }
 }

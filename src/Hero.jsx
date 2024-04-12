@@ -10,10 +10,11 @@ export default function Hero(){
     function toggle(e){
         if(toggleMenu){
             setToggleMenu(false)
-            console.log("false")
+            document.body.classList.remove('no-scroll');
+            
         } else{
             setToggleMenu(true)
-            console.log(true);
+            document.body.classList.add('no-scroll');
         }
     }
 
@@ -41,7 +42,7 @@ export default function Hero(){
 
     return(
         <section className="banner-principal" id="banner">
-        <div className={`menu-banner ${scrolled ? 'scrolled' : ''}`}>
+        <div className={`menu-banner ${scrolled ? 'scrolled' : (toggleMenu ? "menuopened" : "")}`}>
           <div className="logo"><a href="#" className="logo"><img src={logonegativo} width="200px" /></a></div>
           <a id="menu-button" href="#menu-button" className="material-symbols-outlined menu-mobile" onClick={toggle}>
             menu
