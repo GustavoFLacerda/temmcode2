@@ -2,7 +2,7 @@
 
 export default function Contato(){
     return(
-        <section class="contact_section">
+        <section class="contact_section" id="contato">
             <div className="contact_card">
                 <h1>Vamos começar?</h1>
                 <form>

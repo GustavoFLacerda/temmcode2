@@ -33,11 +33,9 @@ export default function Hero(){
     };
     }, []);
 
-    const scrollToSection = (sectionId) => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
+    const closeMenu = () => {
+      setToggleMenu(false);
+      document.body.classList.remove('no-scroll');
     };
 
     return(
@@ -48,10 +46,10 @@ export default function Hero(){
             menu
           </a>
           <div className={!toggleMenu? "links-menu" : "links-menu links-mobile"} id="links-menu">
-            <a href="#" onClick={() => scrollToSection("servicos")}>Nossos serviços</a>
-            <a href="#">Portifólio</a>
-            <a href="#">Temm PDV</a>
-            <a href="#">Contato</a>
+            <a href="#servicos" onClick={closeMenu}>Nossos serviços</a>
+            <a href="#portfolio" onClick={closeMenu}>Portifólio</a>
+            <a href="#" onClick={closeMenu}>Temm PDV</a>
+            <a href="#contato" onClick={closeMenu}>Contato</a>
           </div>
         </div>
         <div className="container-banner">
@@ -62,8 +60,8 @@ export default function Hero(){
             </h1>
             <p>Criamos softwares sob medida alinhados às principais necessidades do negócio.</p>
           </div>
-          <a href="" className="btn-outline">Nossos serviços</a>
-          <a href="" className="btn-outline second-outline">Solicitar orçamento</a>
+          <a href="#servicos" className="btn-outline">Nossos serviços</a>
+          <a href="#contato" className="btn-outline second-outline">Solicitar orçamento</a>
         </div>
       </section>
     )
