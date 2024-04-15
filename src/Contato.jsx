@@ -1,25 +1,57 @@
-
+import { useState } from "react"
+import axios from "axios";
 
 export default function Contato(){
+
+    const [formData, setFormData] = useState({name: "", surname: "", tel: "", email: ""});
+    const [informationSent, setInformationSent] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    function submit(e){
+        e.preventDefault();
+        if(e.target.classList.contains("contact_button")){
+            let url = "https://wa.me/5543933001868"
+            window.open(url, "_tab");
+        } else{
+            setLoading(true);
+            axios.post(`https://apilink`, formData)
+            .then(
+                (res) => {
+                    setInformationSent(true);
+                    setLoading(false);
+                }
+            )
+            .catch(
+                (err) => {alert(err.response.status);setLoading(false)}
+            )
+        }
+    }
+
+
+    function input(e){
+        let obj = formData;
+        obj[e.target.name] = e.target.value;
+        setFormData({...obj})
+    }
     return(
         <section class="contact_section" id="contato">
             <div className="contact_card">
                 <h1>Vamos começar?</h1>
-                <form>
-                    <input name="tel" placeholder="Telefone" type="tel" />
-                    <input name="email" placeholder="Email" type="email" />
+                <form onSubmit={submit}>
+                    <input onChange={input} name="tel" placeholder="Telefone" type="tel" />
+                    <input onChange={input} name="email" placeholder="Email" type="email" />
                     <div>
-                        <input name="name" placeholder="Nome" />
-                        <input name="surname" placeholder="Sobrenome" /> 
+                        <input onChange={input} name="name" placeholder="Nome" />
+                        <input onChange={input} name="surname" placeholder="Sobrenome" /> 
                     </div>
                     <textarea rows="26" cols="18" />
                     <div class="button_container">
-                    <button type="submit">Enviar</button>
+                    <button disabled={loading ? true : false} type="submit">Enviar</button>
                     </div>
                 </form>
                 <div className="whatsapp_choice">
                     <h1>Ou se preferir...</h1>
-                    <button className="contact_button">Whatsapp</button>
+                    <button  disabled={loading ? true : false}  type="submit" className="contact_button">Whatsapp</button>
                 </div>
             </div>
             <div className="follow_card">
