@@ -1,8 +1,12 @@
 
 
 export default function Case(props){
+
+    function open(e){
+        window.open(props.url)
+    }
    return(
-    <div className="case">
+    <div className="case" onClick={open}>
         <img src={props.img} />
         <h1 className="caseH1 casetitle">{props.title}</h1>
         <h1 className="caseH1">{props.description}</h1>

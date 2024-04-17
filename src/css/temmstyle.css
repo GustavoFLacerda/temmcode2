@@ -2034,76 +2034,6 @@ section#servicos{
     background: rgba(0, 0, 0, 0.95);
 }
 
-@media (max-width: 700px){
-    div.case_column1{
-        width: 100%;
-    }
-    
-    div.case_column2{
-        width: 100%;
-    }
-
-    div.casecontainer{
-        width: 80%;
-    }
-
-    section.contact_section div.contact_card, section.contact_section div.follow_card{
-        width: 100%;
-        clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
-        margin-bottom: 25px;
-        font-size: 1em;
-    }
-
-    section.portfolio h1{
-        font-size: 2em; /* change */
-        text-align: center;
-    }
-
-    div.case_column2{
-        margin-top: 0;
-    }
-
-    div.marquee{
-        font-size: 3em;
-        height: 280px;
-        min-height: 280px;
-    }
-
-    .menu-banner {
-        position: fixed;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        padding-bottom: 7%;
-        max-width: 1620px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        top: 7%;
-        padding-right: 5vw;;
-        padding-left: 5vw;;
-        z-index: 3;
-    }
-
-    .menu-banner.scrolled, .menu-banner.menuopened{
-        background: rgba(0, 0, 0, 0.95);
-        height: 100px;
-        top: 0%;
-        padding-top: 15px;
-        box-sizing: border-box;
-        padding-bottom: 15px;
-    }
-
-    .second-outline{
-        margin-left: 20px;
-    }
-
-    .card-servicos p{
-        margin: 30px 30px 30px 30px;
-        font-size:1em;
-    }
-}
 }
 .portfolio{
     background: #010620;
@@ -2416,4 +2346,75 @@ section#servicos{
 }
 .casetitle{
     font-weight: bold;
+}
+
+@media (max-width: 700px){
+    div.case_column1{
+        width: 100%;
+    }
+    
+    div.case_column2{
+        width: 100%;
+    }
+
+    div.casecontainer{
+        width: 80%;
+    }
+
+    section.contact_section div.contact_card, section.contact_section div.follow_card{
+        width: 100%;
+        clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+        margin-bottom: 25px;
+        font-size: 1em;
+    }
+
+    section.portfolio h1{
+        font-size: 2em; /* change */
+        text-align: center;
+    }
+
+    div.case_column2{
+        margin-top: 0;
+    }
+
+    div.marquee{
+        font-size: 3em;
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .menu-banner {
+        position: fixed;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-bottom: 7%;
+        max-width: 1620px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 7%;
+        padding-right: 5vw;;
+        padding-left: 5vw;;
+        z-index: 3;
+    }
+
+    .menu-banner.scrolled, .menu-banner.menuopened{
+        background: rgba(0, 0, 0, 0.95);
+        height: 100px;
+        top: 0%;
+        padding-top: 15px;
+        box-sizing: border-box;
+        padding-bottom: 15px;
+    }
+
+    .second-outline{
+        margin-left: 20px;
+    }
+
+    .card-servicos p{
+        margin: 30px 30px 30px 30px;
+        font-size:1em;
+    }
 }

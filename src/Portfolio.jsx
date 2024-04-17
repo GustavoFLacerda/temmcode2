@@ -17,7 +17,8 @@ export default function Portfolio(){
                 <div className="case_column1">
                 <div className="case_border_container">
                 <Case 
-                img={kuros} 
+                img={kuros}
+                url={"https://sourceforge.net/projects/tardisdevs/files/kuros/"}
                 title={"KurOS"}
                 description={"Realizamos, juntamente à iniciativa Dev Caminhante, o desenvolvimento de um sistema operacional linux com um ambiente pré-configurado para programação."}
                 tags={["Sistema Operacional", "Linux", "KurOS"]}
