@@ -2414,3 +2414,6 @@ section#servicos{
 .menu-banner.menuopened{
     background: rgba(0, 0, 0, 0.95);
 }
+.casetitle{
+    font-weight: bold;
+}

@@ -18,7 +18,8 @@ export default function Portfolio(){
                 <div className="case_border_container">
                 <Case 
                 img={kuros} 
-                description={"KurOS \n Realizamos, juntamente à iniciativa Dev Caminhante, o desenvolvimento de um sistema operacional linux com um ambiente pré-configurado para programação."}
+                title={"KurOS"}
+                description={"Realizamos, juntamente à iniciativa Dev Caminhante, o desenvolvimento de um sistema operacional linux com um ambiente pré-configurado para programação."}
                 tags={["Sistema Operacional", "Linux", "KurOS"]}
                 logo={logonegativo}
                 />
@@ -26,7 +27,8 @@ export default function Portfolio(){
                 <div className="case_border_container">
                 <Case
                 img={infofarmer} 
-                description={"InfoFarmer \n Desenvolvemos uma aplicação open source para aumentar a produtividade em âmbito rural"}
+                title={"InfoFarmer"}
+                description={"Desenvolvemos uma aplicação open source para aumentar a produtividade em âmbito rural"}
                 tags={["Inteligência Artificial", "Algoritmo"]}
                 logo={logonegativo}
                 />
@@ -36,7 +38,8 @@ export default function Portfolio(){
                 <div className="case_border_container">
                 <Case
                 img={pointofsale} 
-                description={"Temm PDV \n Em Breve..."}
+                title={"Temm PDV"}
+                description={"Em Breve..."}
                 tags={["Ponto de Venda", "Desenvolvimento Web", "Interface de Usuário"]}
                 logo={logonegativo}
                 />
