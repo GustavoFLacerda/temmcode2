@@ -63,8 +63,8 @@ export default function Contato(){
             <div className="follow_card">
                 <h1>Acompanhe nosso trabalho!</h1>
                 <div className="contact_options">
-                    <button className="contact_button" href="https://www.linkedin.com/company/temmcode/">Instagram</button>
-                    <button className="contact_button" href="https://www.linkedin.com/company/temmcode/">Linkedin</button>
+                    <button className="contact_button" onClick={() => window.open("https://www.linkedin.com/company/temmcode/")}>Instagram</button>
+                    <button className="contact_button" onClick={() => window.open("https://www.linkedin.com/company/temmcode/")}>Linkedin</button>
                 </div>
                 <h4>© 2024 Temm Code</h4>
             </div>
