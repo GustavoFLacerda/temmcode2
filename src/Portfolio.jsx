@@ -1,6 +1,9 @@
 import Case from "./assets/Case";
 import contato from "./Imagens/contato.jpg";
 import logonegativo from "./Imagens/logonegativo.png"
+import kuros from "./Imagens/kuros.png"
+import pointofsale from "./Imagens/pointofsale.jpg"
+import infofarmer from "./Imagens/infofarmer.png"
 
 export default function Portfolio(){
 
@@ -14,17 +17,17 @@ export default function Portfolio(){
                 <div className="case_column1">
                 <div className="case_border_container">
                 <Case 
-                img={contato} 
-                description={"Realizamos o desenvolvimento completo de um novo sistema de recomendações baseado em inteligência artificial"}
-                tags={["Inteligência Artificial", "Desenvolvimento Web", "Aplicações Mobile"]}
+                img={kuros} 
+                description={"KurOS \n Realizamos, juntamente à iniciativa Dev Caminhante, o desenvolvimento de um sistema operacional linux com um ambiente pré-configurado para programação."}
+                tags={["Sistema Operacional", "Linux", "KurOS"]}
                 logo={logonegativo}
                 />
                 </div>
                 <div className="case_border_container">
                 <Case
-                img={contato} 
-                description={"Realizamos o desenvolvimento completo de um novo sistema de recomendações baseado em inteligência artificial"}
-                tags={["Inteligência Artificial", "Desenvolvimento Web", "Aplicações Mobile"]}
+                img={infofarmer} 
+                description={"InfoFarmer \n Desenvolvemos uma aplicação open source para aumentar a produtividade em âmbito rural"}
+                tags={["Inteligência Artificial", "Algoritmo"]}
                 logo={logonegativo}
                 />
                 </div>
@@ -32,23 +35,15 @@ export default function Portfolio(){
                 <div className="case_column2">
                 <div className="case_border_container">
                 <Case
-                img={contato} 
-                description={"Realizamos o desenvolvimento completo de um novo sistema de recomendações baseado em inteligência artificial"}
-                tags={["Inteligência Artificial", "Desenvolvimento Web", "Aplicações Mobile"]}
-                logo={logonegativo}
-                />
-                </div>
-                <div className="case_border_container">
-                <Case
-                img={contato} 
-                description={"Realizamos o desenvolvimento completo de um novo sistema de recomendações baseado em inteligência artificial"}
-                tags={["Inteligência Artificial", "Desenvolvimento Web", "Aplicações Mobile"]}
+                img={pointofsale} 
+                description={"Temm PDV \n Em Breve..."}
+                tags={["Ponto de Venda", "Desenvolvimento Web", "Interface de Usuário"]}
                 logo={logonegativo}
                 />
                 </div>
                 </div>
             </div>
-            <button id="portfolio_see_more" className="portfolio_see_more">Ver mais</button>
+            <button id="portfolio_see_more" className="portfolio_see_more" onClick={() => {window.open("https://gitlab.com/mmonfre")}}>Ver mais</button>
         </section>
     )
 }

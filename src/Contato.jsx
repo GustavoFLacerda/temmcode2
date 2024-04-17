@@ -3,9 +3,11 @@ import axios from "axios";
 
 export default function Contato(){
 
-    const [formData, setFormData] = useState({name: "", surname: "", tel: "", email: ""});
+    const [formData, setFormData] = useState({name: "", surname: "", tel: "", email: "", subject: ""});
     const [informationSent, setInformationSent] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [emailBody, setEmailBody] = useState("");
+    const [emailSubject, setEmailSubject] = useState("");
 
     function submit(e){
         e.preventDefault();
@@ -32,6 +34,10 @@ export default function Contato(){
         let obj = formData;
         obj[e.target.name] = e.target.value;
         setFormData({...obj})
+        setEmailSubject("Informações para o cliente: " + formData.name + " " + formData.surname + " tel: " + formData.tel)
+        setEmailBody(formData.subject);
+        console.log(emailBody)
+
     }
     return(
         <section class="contact_section" id="contato">
@@ -44,21 +50,21 @@ export default function Contato(){
                         <input onChange={input} name="name" placeholder="Nome" />
                         <input onChange={input} name="surname" placeholder="Sobrenome" /> 
                     </div>
-                    <textarea rows="26" cols="18" />
+                    <textarea onChange={input} name="subject" rows="26" cols="18" />
                     <div class="button_container">
-                    <button disabled={loading ? true : false} type="submit">Enviar</button>
+                    <a disabled={loading ? true : false} href={`mailto:contato@temmcode.com?subject=${emailSubject}&body=${encodeURIComponent(JSON.stringify(formData))}`}>Enviar</a>
                     </div>
                 </form>
                 <div className="whatsapp_choice">
                     <h1>Ou se preferir...</h1>
-                    <button  disabled={loading ? true : false}  type="submit" className="contact_button">Whatsapp</button>
+                    <button  disabled={loading ? true : false} onClick={submit}  type="submit" className="contact_button">Whatsapp</button>
                 </div>
             </div>
             <div className="follow_card">
                 <h1>Acompanhe nosso trabalho!</h1>
                 <div className="contact_options">
-                    <button className="contact_button">Instagram</button>
-                    <button className="contact_button">Linkedin</button>
+                    <button className="contact_button" href="https://www.linkedin.com/company/temmcode/">Instagram</button>
+                    <button className="contact_button" href="https://www.linkedin.com/company/temmcode/">Linkedin</button>
                 </div>
                 <h4>© 2024 Temm Code</h4>
             </div>
